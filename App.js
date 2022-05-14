@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Cadastro from './Cadastration';
 import Login from './Login';
 import {Button} from 'react-native-elements';
+
 function HomeScreen({navigation}) {
   const style = StyleSheet.create({
     button: {
@@ -16,14 +17,14 @@ function HomeScreen({navigation}) {
       margin:5,
     },
     texto: {
-      fontSize:25,
+      fontSize:50,
       color:'white',
       margin:25,
   }
   })
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'gray' }}>
-      <Text style={style.texto}>Sistema de Cadastro de Login</Text>
+      <Text style={style.texto}>CadAluno</Text>
       <Button 
         buttonStyle={style.button}
         title="Cadastrar"
@@ -35,11 +36,9 @@ function HomeScreen({navigation}) {
         title="Login"
         onPress={() => navigation.navigate('Login')}
         
-      />
-      
+      />      
     </View>
-    
-    
+        
   );
 }
 

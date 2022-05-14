@@ -6,6 +6,7 @@ import firebase from './firebaseconection';
 import Logado from './logado';
 import failedLogin from './failedlogin';
 import {Button} from 'react-native-elements';
+
 function HomeLogin({navigation}){
     const style = StyleSheet.create({
         button: {
@@ -48,12 +49,14 @@ function HomeLogin({navigation}){
     return(
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'gray' }}>
             <Text style={style.texto}>Login de Usuários</Text>
+
             <Text>E-mail</Text>
             <TextInput
              style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30, margin:10}} 
              value={email}
              onChangeText={txtEmail => onChangeEmail(txtEmail)}>
             </TextInput>
+
             <Text>Senha</Text>
             <TextInput
              secureTextEntry={true}
@@ -61,6 +64,7 @@ function HomeLogin({navigation}){
              value={password}
              onChangeText={txtPassword => onChangePassword(txtPassword)}>
             </TextInput>
+            
             <Button 
             buttonStyle={style.button}
             title="Entrar"

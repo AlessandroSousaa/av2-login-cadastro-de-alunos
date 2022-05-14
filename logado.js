@@ -4,6 +4,7 @@ import firebase from './firebaseconection';
 import { TextInput } from 'react-native-gesture-handler';
 import login from './Login';
 import { createStackNavigator } from '@react-navigation/stack';
+
 function logado({navigation}){
   if (firebase.auth().currentUser !== null){
 

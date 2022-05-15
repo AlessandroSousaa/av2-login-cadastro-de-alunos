@@ -24,7 +24,15 @@ function logado({navigation}) {
         setDesc(txtDescription)
     }
     const InsertProduto = () => {
-        firebase.collection('produtos').add({nome:nome, desc:desc});
+        firebase.firestore().collection('produtos').add({nome:nome, desc:desc});
+    }
+
+    const UpdateProduto = () => {
+      firebase.firestore().collection('produtos').doc('CazRocNjV9GC9pMZwg4V').set({nome:nome, desc:desc});
+    }
+
+    const DeleteProduto = () => {
+      firebase.firestore().collection('produtos').doc('CazRocNjV9GC9pMZwg4V').delete();
     }
 
     return(
@@ -47,7 +55,17 @@ function logado({navigation}) {
             title="Cadastrar"
             onPress={InsertProduto}
         />
+         <Button
+            title="Atualizar"
+            onPress={UpdateProduto}
+        />
+        <Button
+            title="Deletar"
+            onPress={DeleteProduto}
+        />
         </View>
+
+        
     );
 }
 const Stack = createStackNavigator();

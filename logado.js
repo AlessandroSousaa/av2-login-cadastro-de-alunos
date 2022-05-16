@@ -23,49 +23,47 @@ function logado({navigation}) {
     const onChangeDescription = (txtDescription) =>{
         setDesc(txtDescription)
     }
-    const InsertProduto = () => {
-        firebase.firestore().collection('produtos').add({nome:nome, desc:desc});
+    const InsertAluno = () => {
+        firebase.firestore().collection('alunos').add({nome:nome, desc:desc});
     }
 
-    const UpdateProduto = () => {
-      firebase.firestore().collection('produtos').doc('CazRocNjV9GC9pMZwg4V').set({nome:nome, desc:desc});
+    const UpdateAluno = () => {
+      firebase.firestore().collection('alunos').doc('urDrQgGyspP3sHMOGdXM').set({nome:nome, desc:desc});
     }
 
-    const DeleteProduto = () => {
-      firebase.firestore().collection('produtos').doc('CazRocNjV9GC9pMZwg4V').delete();
+    const DeleteAluno = () => {
+      firebase.firestore().collection('alunos').doc('oCv4LMiqMsDVVQ8EpzSq').delete();
     }
 
     return(
         
-        <View>
+        <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'gray' }}>
         <Text>Cadastrar Alunos</Text>
         <TextInput
-        style={{backgroundColor:'white',fontSize:16,borderRadius:15,textAlign:'center', borderWidth:5, borderColor:'red', width:300}} 
+        style={{backgroundColor:'white',fontSize:16,borderRadius:15,textAlign:'center', borderWidth:5, borderColor:'#38b0de', width:300}} 
         value={nome}
         onChangeText={txtNome => onChangeNome(txtNome)}
         >
         </TextInput>
         <TextInput
-        style={{backgroundColor:'white',fontSize:16,textAlign:'center',borderRadius:15, borderWidth:5, borderColor:'red', width:300}} 
+        style={{backgroundColor:'white',fontSize:16,textAlign:'center',borderRadius:15, borderWidth:5, borderColor:'#38b0de', width:300}} 
         value={desc}
         onChangeText={txtDescription => onChangeDescription(txtDescription)}
         >
         </TextInput>
         <Button
             title="Cadastrar"
-            onPress={InsertProduto}
+            onPress={InsertAluno}
         />
-         <Button
+        <Button
             title="Atualizar"
-            onPress={UpdateProduto}
+            onPress={UpdateAluno}
         />
         <Button
             title="Deletar"
-            onPress={DeleteProduto}
+            onPress={DeleteAluno}
         />
         </View>
-
-        
     );
 }
 const Stack = createStackNavigator();

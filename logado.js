@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Text, Button, View } from 'react-native';
 import firebase from './firebaseconection';
-import { TextInput } from 'react-native-gesture-handler';
+import { FlatList, TextInput } from 'react-native-gesture-handler';
 import login from './Login';
 import { createStackNavigator } from '@react-navigation/stack';
 import { database } from 'firebase';
+import { firestore } from 'firebase';
 
 
 function logado({navigation}) {
@@ -36,9 +37,8 @@ function logado({navigation}) {
       firebase.firestore().collection('alunos').doc('oCv4LMiqMsDVVQ8EpzSq').delete();
     }
     const Show = () => {
-      firebase.firestore().collection("produtos");
-      produtos.get().then((snapshot) => { snapshot.docs.forEach(doc => {
-           
+      firebase.firestore().collection("alunos");
+      alunos.get().then((snapshot) => { snapshot.docs.forEach(doc =>{ 
       })})
   }
   const ref = firebase.firestore().collection('alunos');
@@ -79,18 +79,33 @@ function logado({navigation}) {
             title="Cadastrar"
             onPress={InsertAluno}
         />
-        <Button
-            title="Atualizar"
-            onPress={UpdateAluno}
-        />
-        <Button
+
+        
+        <FlatList
+          data={data}
+          renderItem={({item}) => (
+            <View>
+            <Text>Nome: {item.nome} </Text>
+            <Text>Descrição: {item.desc} </Text>
+
+            <Button
             title="Deletar"
             onPress={DeleteAluno}
+            />
+
+            <Button
+            title="Atualizar"
+            onPress={UpdateAluno}
+            />
+
+            </View>
+        )}
         />
+          </View>
         
-        </View>
     );
 }
+
 const Stack = createStackNavigator();
 
 function CadastrationForm() {

@@ -48,7 +48,7 @@ function HomeLogin({navigation}){
     }
     return(
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
-            <Text style={{paddingBottom:70, color:'#f4d16a', fontSize: 35}}>Login de Usuários</Text>
+            <Text style={{paddingBottom:70, color:'#f4d16a', fontSize: 36}}>Login de Usuários</Text>
             <Text style={style.texto}>E-mail</Text>
             <TextInput
              placeholder='Digite seu e-mail'

@@ -47,21 +47,12 @@ function HomeLogin({navigation}){
         })
     }
     return(
-<<<<<<< Updated upstream
-        <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'gray' }}>
-            <Text style={style.texto}>Login de Usuários</Text>
-
-            <Text>E-mail</Text>
-            <TextInput
-             style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30, margin:10}} 
-=======
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
             <Text style={{paddingBottom:70, color:'#f4d16a', fontSize: 35}}>Login de Usuários</Text>
             <Text style={style.texto}>E-mail</Text>
             <TextInput
              placeholder='Digite seu e-mail'
              style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:'75%', height:60, margin:10, fontSize:20}} 
->>>>>>> Stashed changes
              value={email}
              onChangeText={txtEmail => onChangeEmail(txtEmail)}>
             </TextInput>
@@ -69,11 +60,7 @@ function HomeLogin({navigation}){
             <Text>Senha</Text>
             <TextInput
              secureTextEntry={true}
-<<<<<<< Updated upstream
-            style={{backgroundColor:'white',textAlign:"center" ,borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30, margin:10}} 
-=======
             style={{backgroundColor:'white',textAlign:"center" ,borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:'75%', height:60, margin:10, fontSize:20}} 
->>>>>>> Stashed changes
              value={password}
              onChangeText={txtPassword => onChangePassword(txtPassword)}>
             </TextInput>

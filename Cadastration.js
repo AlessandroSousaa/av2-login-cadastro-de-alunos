@@ -38,16 +38,9 @@ function TaskForm({navigation}){
         })
     }
     return(
-<<<<<<< Updated upstream
-        <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'gray' }}>
-            <Text>Cadastro de Usuários</Text>
-
-            <Text>Email</Text>
-=======
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
             <Text style={{paddingBottom:70, color:'#f4d16a', fontSize: 35}}>Cadastro de Usuários</Text>
             <Text style={{fontSize:35, color:'#f4d16a'}}>Email</Text>
->>>>>>> Stashed changes
             <TextInput
             placeholder='Digite seu e-mail'
             style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:'75%', height:60, margin:10, fontSize:20}} 

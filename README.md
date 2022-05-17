@@ -28,6 +28,7 @@ npm install @react-native-elements
 Instalando dependências do Expo
 ```bash
 expo install react-native-screens react-native-safe-area-context
+expo install expo-linear-gradient
 ```
 
 

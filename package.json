@@ -9,15 +9,10 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
-<<<<<<< Updated upstream
-    "@react-navigation/native": "^5.9.8",
-    "@react-navigation/stack": "^5.9.0",
-=======
     "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/drawer": "^5.10.0",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/stack": "^6.2.1",
->>>>>>> Stashed changes
     "apisauce": "^1.1.2",
     "axios": "^0.19.2",
     "expo": "^45.0.0",

@@ -5,9 +5,9 @@ import { TextInput } from 'react-native-gesture-handler';
 import login from './Login';
 import { createStackNavigator } from '@react-navigation/stack';
 import { database } from 'firebase';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-
-function logado({navigation}) {
+function Logado({navigation}) {
   if (firebase.auth().currentUser !== null){
 
   }else{
@@ -51,18 +51,6 @@ function logado({navigation}) {
         onChangeText={txtDescription => onChangeDescription(txtDescription)}
         >
         </TextInput>
-        <Button
-            title="Cadastrar"
-            onPress={InsertAluno}
-        />
-        <Button
-            title="Atualizar"
-            onPress={UpdateAluno}
-        />
-        <Button
-            title="Deletar"
-            onPress={DeleteAluno}
-        />
         </View>
     );
 }
@@ -72,10 +60,11 @@ function CadastrationForm() {
   return (
    
       <Stack.Navigator>
-        <Stack.Screen name="logado" component={logado} />
-        <Stack.Screen name="login" component={login} />
+        <Stack.Screen name="logado" component={Logado} options={{headerShown:false}} />
+        <Stack.Screen name="login" component={login} options={{headerShown:false}} />
       </Stack.Navigator>
    
   );
 }
+
 export default CadastrationForm;

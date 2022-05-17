@@ -6,6 +6,7 @@ import Cadastro from './Cadastration';
 import Login from './Login';
 import {Button} from 'react-native-elements';
 
+
 function HomeScreen({navigation}) {
   const style = StyleSheet.create({
     button: {

@@ -11,12 +11,13 @@ import { withTheme } from 'styled-components';
 function TaskForm({navigation}){
     const style = StyleSheet.create({
         button: {
-          backgroundColor:'#38b0de',
+          backgroundColor:'#f4d16a',
           borderRadius:15,
           borderWidth:1,
           borderColor:'white',
           width:300,
           margin:20,
+          height:80,
         }
       })
     const [email, setEmail] = useState('')
@@ -37,20 +38,28 @@ function TaskForm({navigation}){
         })
     }
     return(
+<<<<<<< Updated upstream
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'gray' }}>
             <Text>Cadastro de Usuários</Text>
 
             <Text>Email</Text>
+=======
+        <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
+            <Text style={{paddingBottom:70, color:'#f4d16a', fontSize: 35}}>Cadastro de Usuários</Text>
+            <Text style={{fontSize:35, color:'#f4d16a'}}>Email</Text>
+>>>>>>> Stashed changes
             <TextInput
-            style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30, margin:10}} 
+            placeholder='Digite seu e-mail'
+            style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:'75%', height:60, margin:10, fontSize:20}} 
             value={email}
             onChangeText={txtEmail => onChangeEmail(txtEmail)}>
             </TextInput >
 
-            <Text>Senha</Text>
+            <Text style={{fontSize:35, color:'#f4d16a'}}>Senha</Text>
             <TextInput
+            placeholder='Digite sua senha'
              secureTextEntry={true}
-            style={{backgroundColor:'white',textAlign:'center',borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30,margin:10}} 
+            style={{backgroundColor:'white',textAlign:'center',borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width: '75%', height:60, margin:10, fontSize:20}} 
             value={password}
             onChangeText={txtPassword => onChangePassword(txtPassword)}
             >
@@ -72,8 +81,8 @@ function CadastrationForm() {
   return (
    
       <Stack.Navigator>
-        <Stack.Screen name="TaskForm" component={TaskForm} />
-        <Stack.Screen name="sucess" component={sucess} />
+        <Stack.Screen name="TaskForm" component={TaskForm} options={{headerShown:false}}/>
+        <Stack.Screen name="sucess" component={sucess} options={{headerShown:false}}/>
       </Stack.Navigator>
    
   );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Text, Button, View } from 'react-native';
 import firebase from './firebaseconection';
 import { TextInput } from 'react-native-gesture-handler';
@@ -16,6 +16,7 @@ function logado({navigation}) {
 
     const [nome, setNome] = useState('')
     const [desc, setDesc] = useState('')
+    const [data, setData] = useState('')
 
     const onChangeNome = (txtNome) => {
         setNome(txtNome)
@@ -34,6 +35,26 @@ function logado({navigation}) {
     const DeleteAluno = () => {
       firebase.firestore().collection('alunos').doc('oCv4LMiqMsDVVQ8EpzSq').delete();
     }
+    const Show = () => {
+      firebase.firestore().collection("produtos");
+      produtos.get().then((snapshot) => { snapshot.docs.forEach(doc => {
+           
+      })})
+  }
+  const ref = firebase.firestore().collection('alunos');
+    useEffect(() => {
+      ref.onSnapshot(querySnapshot => {
+        const data = []
+        querySnapshot.forEach(doc => {
+          data.push({ 
+            ...doc.data(),
+            key:doc.id
+          })
+        })
+        setData(data)
+      })
+      return() => ref()
+    }, [])
 
     return(
         
@@ -66,6 +87,7 @@ function logado({navigation}) {
             title="Deletar"
             onPress={DeleteAluno}
         />
+        
         </View>
     );
 }

@@ -18,13 +18,16 @@ function HomeScreen({navigation}) {
     },
     texto: {
       fontSize:50,
-      color:'white',
+      color:'black',
       margin:25,
+
   }
   })
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'gray' }}>
+    <View>
       <Text style={style.texto}>CadAluno</Text>
+    <View style={{ flex: 2, alignItems: 'center', justifyContent: 'center', backgroundColor:'gray', height:100}}>
+      
       <Button 
         buttonStyle={style.button}
         title="Cadastrar"
@@ -36,7 +39,8 @@ function HomeScreen({navigation}) {
         title="Login"
         onPress={() => navigation.navigate('Login')}
         
-      />      
+      />
+    </View>
     </View>
         
   );
@@ -48,7 +52,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{headerTitleAlign:'center'}}/>
         <Stack.Screen name="Cadastro" component={Cadastro} />
         <Stack.Screen name="Login" component={Login} />
       </Stack.Navigator>

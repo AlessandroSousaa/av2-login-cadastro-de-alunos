@@ -10,18 +10,19 @@ import {Button} from 'react-native-elements';
 function HomeLogin({navigation}){
     const style = StyleSheet.create({
         button: {
-          backgroundColor:'#38b0de',
+          backgroundColor:'#f4d16a',
           borderRadius:15,
           borderWidth:1,
           borderColor:'white',
           width:300,
           margin:20,
+          height:80,
         },
         texto: {
             fontSize:35,
-            color:'white',
-            margin:25,
-        }
+            color:'#F2CA52',
+            margin:1,
+        },
       })
     function navegarSucess(){
         navigation.navigate('Logado')
@@ -47,20 +48,20 @@ function HomeLogin({navigation}){
         })
     }
     return(
-        <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'gray' }}>
-            <Text style={style.texto}>Login de Usuários</Text>
-
-            <Text>E-mail</Text>
+        <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
+            <Text style={style.texto}>E-mail</Text>
             <TextInput
-             style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30, margin:10}} 
+             placeholder='Digite seu e-mail'
+             style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:300, height:80, margin:10, fontSize:25}} 
              value={email}
              onChangeText={txtEmail => onChangeEmail(txtEmail)}>
             </TextInput>
 
-            <Text>Senha</Text>
+            <Text style={style.texto}>Senha</Text>
             <TextInput
+             placeholder='Digite sua senha'
              secureTextEntry={true}
-            style={{backgroundColor:'white',textAlign:"center" ,borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30, margin:10}} 
+            style={{backgroundColor:'white',textAlign:"center" ,borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:300, height:80, margin:10, fontSize:25}} 
              value={password}
              onChangeText={txtPassword => onChangePassword(txtPassword)}>
             </TextInput>

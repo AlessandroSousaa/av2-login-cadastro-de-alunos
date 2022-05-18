@@ -26,16 +26,18 @@ function logado({navigation}) {
         setDesc(txtDescription)
     }
     const InsertAluno = () => {
-        firebase.firestore().collection('alunos').add({nome:nome, desc:desc});
+      firebase.firestore().collection('alunos').add({nome:nome, desc:desc});
     }
 
     const UpdateAluno = () => {
-      firebase.firestore().collection('alunos').doc('urDrQgGyspP3sHMOGdXM').set({nome:nome, desc:desc});
+      firebase.firestore().collection('alunos').doc('').set({nome:nome, desc:desc});
     }
 
     const DeleteAluno = () => {
-      firebase.firestore().collection('alunos').doc('oCv4LMiqMsDVVQ8EpzSq').delete();
+      firebase.firestore().collection('alunos').doc('id').delete();
     }
+
+
     const Show = () => {
       firebase.firestore().collection("alunos");
       alunos.get().then((snapshot) => { snapshot.docs.forEach(doc =>{ 

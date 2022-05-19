@@ -30,7 +30,7 @@ function HomeScreen({navigation}) {
     
     <View style={{flex:1, backgroundColor:'#f7e099'}}>
       <LinearGradient colors={['#F2CA52', '#f4d16a', '#f6d981', '#f7e099']} style={{paddingTop:80}}>
-          <Image source={require('./logo.png')} style={{alignSelf:'center'}}/>
+          <Image source={require('./assets/logo.png')} style={{alignSelf:'center'}}/>
       <Text style={style.texto}>CadAluno</Text>
       </LinearGradient>
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor:'white', borderTopLeftRadius:30, borderTopRightRadius:30, height:'50%'}}>

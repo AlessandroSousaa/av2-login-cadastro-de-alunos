@@ -16,10 +16,10 @@ function HomeLogin({navigation}){
           borderColor:'white',
           width:300,
           margin:20,
-          height:80,
+          height:50,
         },
         texto: {
-            fontSize:35,
+            fontSize:25,
             color:'#F2CA52',
             margin:1,
         },
@@ -52,7 +52,7 @@ function HomeLogin({navigation}){
             <Text style={style.texto}>E-mail</Text>
             <TextInput
              placeholder='Digite seu e-mail'
-             style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:300, height:80, margin:10, fontSize:25}} 
+             style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:300, height:50, margin:10, fontSize:15}} 
              value={email}
              onChangeText={txtEmail => onChangeEmail(txtEmail)}>
             </TextInput>
@@ -61,7 +61,7 @@ function HomeLogin({navigation}){
             <TextInput
              placeholder='Digite sua senha'
              secureTextEntry={true}
-            style={{backgroundColor:'white',textAlign:"center" ,borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:300, height:80, margin:10, fontSize:25}} 
+            style={{backgroundColor:'white',textAlign:"center" ,borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:300, height:50, margin:10, fontSize:15}} 
              value={password}
              onChangeText={txtPassword => onChangePassword(txtPassword)}>
             </TextInput>

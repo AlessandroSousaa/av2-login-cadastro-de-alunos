@@ -62,15 +62,16 @@ function logado({navigation}) {
         
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
         <Text style={{fontSize:35, color:'#F2CA52'}}>Cadastrar Alunos</Text>
+        <View><Text>Aluno</Text></View>
         <TextInput
         style={{backgroundColor:'white',fontSize:25,borderRadius:15,textAlign:'center', borderWidth:3, borderColor:'#F2CA52', width:300, height: 80}} 
         value={nome}
         onChangeText={txtNome => onChangeNome(txtNome)}
         >
         </TextInput>
-        <View>
-          <Text>cu</Text>
-        </View>
+
+        <View><Text>Descrição</Text></View>
+        
         <TextInput
         style={{backgroundColor:'white',fontSize:25,textAlign:'center',borderRadius:15, borderWidth:3, borderColor:'#F2CA52', width:300, height: 80, }} 
         value={desc}

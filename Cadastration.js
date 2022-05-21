@@ -11,13 +11,19 @@ import { withTheme } from 'styled-components';
 function TaskForm({navigation}){
     const style = StyleSheet.create({
         button: {
-          backgroundColor:'#38b0de',
-          borderRadius:15,
-          borderWidth:1,
-          borderColor:'white',
-          width:300,
-          margin:20,
-        }
+            backgroundColor:'#f4d16a',
+            borderRadius:15,
+            borderWidth:1,
+            borderColor:'white',
+            width:300,
+            margin:20,
+            height:50,
+        },
+        texto: {
+            fontSize:20,
+            color:'#F2CA52',
+            margin:1,
+        },
       })
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -38,19 +44,21 @@ function TaskForm({navigation}){
     }
     return(
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
-            <Text>Cadastro de Usuários</Text>
+            <Text style={{fontSize:35, color:'#F2CA52', margin:30}}>Cadastro de Usuários</Text>
 
-            <Text>Email</Text>
+            <Text style={style.texto}>E-mail</Text>
             <TextInput
-            style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30, margin:10}} 
+            placeholder='Digite seu e-mail'
+            style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:300, height:50, margin:10, fontSize:15}}  
             value={email}
             onChangeText={txtEmail => onChangeEmail(txtEmail)}>
             </TextInput >
 
-            <Text>Senha</Text>
+            <Text style={style.texto}>Senha</Text>
             <TextInput
+             placeholder='Digite sua senha'
              secureTextEntry={true}
-            style={{backgroundColor:'white',textAlign:'center',borderRadius:15, borderWidth:3, borderColor:'#38b0de', width:300, height:30,margin:10}} 
+             style={{backgroundColor:'white', textAlign:'center', borderRadius:15, borderWidth:3, borderColor:'#f4d16a', width:300, height:50, margin:10, fontSize:15}}  
             value={password}
             onChangeText={txtPassword => onChangePassword(txtPassword)}
             >

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, Button, View } from 'react-native';
+import { Text, Button, View, StyleSheet } from 'react-native';
 import firebase from './firebaseconection';
 import { FlatList, TextInput } from 'react-native-gesture-handler';
 import login from './Login';
@@ -33,16 +33,11 @@ function logado({navigation}) {
       firebase.firestore().collection('alunos').doc('').set({nome:nome, desc:desc});
     }
 
-    const DeleteAluno = () => {
-      firebase.firestore().collection('alunos').doc('id').delete();
+    function DeleteAluno (doc) {
+      firebase.database().ref('/alunos/' +doc).remove();
     }
 
 
-    const Show = () => {
-      firebase.firestore().collection("alunos");
-      alunos.get().then((snapshot) => { snapshot.docs.forEach(doc =>{ 
-      })})
-  }
   const ref = firebase.firestore().collection('alunos');
     useEffect(() => {
       ref.onSnapshot(querySnapshot => {
@@ -61,18 +56,21 @@ function logado({navigation}) {
     return(
         
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
-        <Text style={{fontSize:35, color:'#F2CA52'}}>Cadastrar Alunos</Text>
+        <Text style={{fontSize:35, color:'#F2CA52', margin:10}}>Cadastrar Alunos</Text>
+
+        <Text>Aluno</Text>
         <TextInput
-        style={{backgroundColor:'white',fontSize:25,borderRadius:15,textAlign:'center', borderWidth:3, borderColor:'#F2CA52', width:300, height: 80}} 
+        placeholder='Nome do aluno'
+        style={{backgroundColor:'white',fontSize:25,borderRadius:15,textAlign:'center', borderWidth:3, borderColor:'#F2CA52', width:300, height: 50, margin:10, fontSize:15}} 
         value={nome}
         onChangeText={txtNome => onChangeNome(txtNome)}
         >
         </TextInput>
-        <View>
-          <Text>cu</Text>
-        </View>
+
+        <Text>Descrição</Text>
         <TextInput
-        style={{backgroundColor:'white',fontSize:25,textAlign:'center',borderRadius:15, borderWidth:3, borderColor:'#F2CA52', width:300, height: 80, }} 
+         placeholder='Descrição do aluno'
+        style={{backgroundColor:'white',fontSize:25,textAlign:'center',borderRadius:15, borderWidth:3, borderColor:'#F2CA52', width:300, height: 50, margin:10, fontSize:15 }} 
         value={desc}
         onChangeText={txtDescription => onChangeDescription(txtDescription)}
         >
@@ -82,18 +80,22 @@ function logado({navigation}) {
             onPress={InsertAluno}
         />
 
-        
-        <FlatList
+        <Text style={{fontSize:35, color:'#F2CA52', margin:20}}>Alunos</Text>
+
+        <FlatList style={{width:300, height: 80, margin:20}}
           data={data}
           renderItem={({item}) => (
+            
             <View>
             <Text>Nome: {item.nome} </Text>
             <Text>Descrição: {item.desc} </Text>
 
+
             <Button
             title="Deletar"
-            onPress={DeleteAluno}
+            onPress={() => { DeleteAluno(item.doc) }}
             />
+
 
             <Button
             title="Atualizar"
@@ -120,4 +122,5 @@ function CadastrationForm() {
    
   );
 }
+
 export default CadastrationForm;

@@ -38,5 +38,5 @@ npm install firebase
 ```
 
 ## Instalação
-![Logo](![IMG_8402](https://user-images.githubusercontent.com/92834495/171284543-3f9ff8ec-5491-4ef8-866c-3dfc6f14bcbe.PNG))
+[IMG_8402](https://user-images.githubusercontent.com/92834495/171284543-3f9ff8ec-5491-4ef8-866c-3dfc6f14bcbe.PNG))
 

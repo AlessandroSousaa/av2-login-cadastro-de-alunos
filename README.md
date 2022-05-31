@@ -1,5 +1,5 @@
 
-# Atividade de desenvolvimento mobile
+## Atividade de desenvolvimento mobile
 
 Cadastro de Alunos 
 
@@ -7,11 +7,12 @@ Cadastro de Alunos
 ## Autores
 
 - [@Alessandro Sousa](https://github.com/AlessandroSousaa)
-- [@João Vilar](https://github.com/BrancoVil)
+- [@Arthur Sales](https://github.com/Arthur-Harley)
 
 ## Telas
 
 <div align="center">
+
   <img src="https://user-images.githubusercontent.com/92834495/171284543-3f9ff8ec-5491-4ef8-866c-3dfc6f14bcbe.PNG" width="150px" />
   <img src="https://user-images.githubusercontent.com/92834495/171284547-826f73c8-0381-40b9-a6b9-b59d818e2bc2.PNG" width="150px" />
   <img src="https://user-images.githubusercontent.com/92834495/171284552-12c80db6-cb3f-4aae-a9a9-5895006c7a2d.PNG" width="150px" />
@@ -19,9 +20,17 @@ Cadastro de Alunos
 
 </div>
 
-## Instalação
+## Tecnologias utilizadas
 
-Instalando
+**React Native** 
+
+**NodeJS** 
+
+**JavaScript** 
+
+**FireBase**
+
+## Instalação
 
 ```bash
 npm install 

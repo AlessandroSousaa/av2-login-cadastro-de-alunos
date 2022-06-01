@@ -13,7 +13,7 @@ function HomeScreen({navigation}) {
       backgroundColor:'#f4d16a',
       borderRadius:15,
       borderWidth:1,
-      borderColor:'white',
+      borderColor:'#ffff',
       width:300,
       margin:5,
     },

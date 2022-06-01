@@ -25,12 +25,12 @@ Professor Rafael Soares
 
 ## Documentação de cores
 
-| Cor               | Hexadecimal                                                |
+| Cor               | Hexadecimal                                                      |
 | ----------------- | ---------------------------------------------------------------- |
-| Soft yellow       | ![#F2ca52](https://via.placeholder.com/10/#F2ca52?text=+) #F2CA52 |
-| Soft orange       | ![#f4d16a](https://via.placeholder.com/10/f4d16a?text=+) #f4d16a |
-| White             | ![#ffff](https://via.placeholder.com/10/#ffff?text=+) #ffff |
-| Very soft yellow  | ![#f7e099](https://via.placeholder.com/10/f7e099?text=+) #f7e099 |
+| Soft yellow       | #F2CA52 |
+| Soft orange       | #f4d16a |
+| White             | #ffff   |
+| Very soft yellow  | #f7e099 |
 
 
 

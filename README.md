@@ -36,15 +36,12 @@ Professor Rafael Soares
 
 ## Tecnologias utilizadas
 
-**React Native** 
+<code><img height="32" src="https://user-images.githubusercontent.com/92834495/171314993-eb6cbc39-a919-4050-b306-a4e5eef89dcf.png" alt="Node"/></code>
+<code><img height="32" src="https://user-images.githubusercontent.com/92834495/171314998-06794e81-6647-408c-8e10-b6e6657f85bc.png" alt="ReactNative"/></code>
+<code><img height="30" src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="JavaScript"/></code> 
+<code><img height="30" src="https://user-images.githubusercontent.com/92834495/171315000-c2ee0764-bff3-4ce0-b745-c157b3d333c8.png" alt="FireBase"/></code> 
+<code><img height="30" src="https://user-images.githubusercontent.com/92834495/171315001-62c63d4f-18ca-41d5-95a9-31bc37526004.png" alt="Expo"/></code> 
 
-**NodeJS** 
-
-**JavaScript** 
-
-**Expo**
-
-**FireBase**
 
 ## Rodando localmente
 

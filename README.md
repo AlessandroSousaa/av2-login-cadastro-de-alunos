@@ -1,7 +1,8 @@
 
 ## Atividade de desenvolvimento mobile
 
-Cadastro de Alunos 
+Projeto destinado para disciplina de desenvolvimento mobile do curso Análise e Desenvolvimento de Sistemas do Centro Universitário Maurício de Nassau.
+Professor Rafael Soare
 
 
 ## Autores

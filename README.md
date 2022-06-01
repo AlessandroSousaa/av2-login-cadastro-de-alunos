@@ -34,8 +34,6 @@ Professor Rafael Soares
 
 
 
-
-
 ## Tecnologias utilizadas
 
 **React Native** 
@@ -48,10 +46,30 @@ Professor Rafael Soares
 
 **FireBase**
 
-## Instalação
+## Rodando localmente
+
+Clone o projeto
 
 ```bash
-npm install 
+  git clone https://link-para-o-projeto
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd my-project
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  expo start
 ```
 
 ## Imports

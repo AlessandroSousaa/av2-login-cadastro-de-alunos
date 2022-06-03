@@ -1,8 +1,10 @@
 
-## Atividade de desenvolvimento mobile
+## Atividade de desenvolvimento mobile e Pratica profissional
+
 
 Projeto destinado para disciplina de desenvolvimento mobile do curso Análise e Desenvolvimento de Sistemas do Centro Universitário Maurício de Nassau.<br>
-Professor Rafael Soares
+Professor Rafael Soares<br>
+Professor Marcones
 
 
 ## Autores

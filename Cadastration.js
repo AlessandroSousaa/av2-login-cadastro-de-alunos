@@ -44,7 +44,7 @@ function TaskForm({navigation}){
     }
     return(
         <View style={{ flex: 1,alignItems: 'center', justifyContent: 'center', backgroundColor:'white' }}>
-            <Text style={{fontSize:35, color:'#F2CA52', margin:30}}>Cadastro de Usuários</Text>
+            <Text style={{fontSize:30, color:'#F2CA52', margin:30}}>Cadastro de Usuários</Text>
 
             <Text style={style.texto}>E-mail</Text>
             <TextInput

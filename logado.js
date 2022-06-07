@@ -33,8 +33,8 @@ function logado({navigation}) {
       firebase.firestore().collection('alunos').doc('').set({nome:nome, desc:desc});
     }
 
-    function DeleteAluno (doc) {
-      firebase.database().ref('/alunos/' +doc).remove();
+    function DeleteAluno (key) {
+      firebase.firestore().ref('/alunos/' +key).remove();
     }
 
 
@@ -93,7 +93,7 @@ function logado({navigation}) {
 
             <Button
             title="Deletar"
-            onPress={() => { DeleteAluno(item.doc) }}
+            onPress={() => { DeleteAluno(item.key) }}
             />
 
 

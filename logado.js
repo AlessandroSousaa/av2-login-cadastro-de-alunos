@@ -30,11 +30,11 @@ function logado({navigation}) {
     }
 
     const UpdateAluno = () => {
-      firebase.firestore().collection('alunos').doc('').set({nome:nome, desc:desc});
+      firebase.firestore().collection('alunos').update({nome:nome, desc:desc});
     }
 
-    function DeleteAluno (key) {
-      firebase.firestore().ref('/alunos/' +key).remove();
+    function DeleteAluno (doc) {
+      firebase.firestore().ref('/alunos/' +doc).remove();
     }
 
 
@@ -93,13 +93,13 @@ function logado({navigation}) {
 
             <Button
             title="Deletar"
-            onPress={() => { DeleteAluno(item.key) }}
+            onPress={() => { DeleteAluno(item.doc) }}
             />
 
 
             <Button
             title="Atualizar"
-            onPress={UpdateAluno}
+            onPress={() => {UpdateAluno(item.nome, item.desc)}}
             />
 
             </View>
